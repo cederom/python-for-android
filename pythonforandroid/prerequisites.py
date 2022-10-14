@@ -7,6 +7,9 @@ import subprocess
 import shutil
 from pythonforandroid.logger import info, warning, error
 
+# Use Linux binaries on FreeBSD.
+if "freebsd" in sys.platform:
+    sys.platform = "linux"
 
 class Prerequisite(object):
     name = "Default"
